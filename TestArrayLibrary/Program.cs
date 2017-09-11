@@ -76,7 +76,7 @@ namespace TestArrayLibrary {
 			Console.WriteLine($"The total high temperature for the month of September 2017 is {AverageHighTemp}");
 
 
-
+			 
 
 
 		}
