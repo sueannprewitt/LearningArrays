@@ -15,7 +15,8 @@ namespace TestArrayLibrary {
 			//Iterating through all items in the array
 			var Total = 0;
 			for(var idx = 0; idx < LearningArrays.TestScores.Count(); idx++) {
-				Total += LearningArrays.TestScores[idx];
+
+			Total += LearningArrays.TestScores[idx];
 			}
 
 			var Average = ((double) Total) / LearningArrays.TestScores.Count();
@@ -45,12 +46,42 @@ namespace TestArrayLibrary {
 			LearningArrays.GradingScores[idx2] = 65;
 
 			Console.WriteLine($"There are {LearningArrays.GradingScores.Count() } items in the list");
+
 			foreach(var score in LearningArrays.GradingScores) {
 				Console.WriteLine($"A score is {score}");
 			}
+
+
+			LearningArrays.HighTemps.Add(65);
+			LearningArrays.HighTemps.Add(63);
+			LearningArrays.HighTemps.Add(81);
+			LearningArrays.HighTemps.Add(86);
+			LearningArrays.HighTemps.Add(77);
+			LearningArrays.HighTemps.Add(69);
+			LearningArrays.HighTemps.Add(71);
+			LearningArrays.HighTemps.Add(76);
+			LearningArrays.HighTemps.Add(74);
+			LearningArrays.HighTemps.Add(74);
+			LearningArrays.HighTemps.Add(72);
+
+			var TotalHighs = 0;
+			for (var idx = 0; idx < LearningArrays.HighTemps.Count(); idx++) {
+
+				TotalHighs += LearningArrays.HighTemps[idx];
+			}
+
+
+			var AverageHighTemp = TotalHighs / LearningArrays.HighTemps.Count();
+
+			Console.WriteLine($"The total high temperature for the month of September 2017 is {AverageHighTemp}");
+
+
+
+
+
 		}
-				
-			
+
+
 
 		static void Main(string[] args) {
 			new Program().Run();
